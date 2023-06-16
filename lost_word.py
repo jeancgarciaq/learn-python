@@ -5,11 +5,8 @@
 
 def run(text: str, target_word: str, replace_word: str) -> str:
     # TU C�DIGO AQU�
-    indice = text.find(target_word)
-    ancho = len(target_word) + indice - 1
-    texto1 = [start:indice]
-    texto2 = [ancho:end]
-    mtext = texto1 + " " + replace_word + " " + texto2
+    particion = text.partition(target_word)
+    mtext = particion[0] + replace_word + particion[2]
 
     return mtext
 
